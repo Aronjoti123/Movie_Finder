@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import SearchBar from "./components/SearchBar";
 import MovieCard from "./components/MovieCard";
 import MovieModal from "./components/MovieModal";
-import Screenshots from "./components/Screenshots";
 import "./App.css";
 
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
@@ -45,7 +44,7 @@ function App() {
       <h1>🎬 Movie Finder</h1>
 
       <SearchBar setQuery={setQuery} />
-      <Screenshots />
+    
 
       <button className="favorites-toggle" onClick={() => setShowFavorites(!showFavorites)}>
         ❤️ Favorites ({favorites.length})
